@@ -93,7 +93,7 @@
       <header>
         <h1>Felah — Gizlilik Politikası</h1>
         <p class="meta">
-          Uygulama: Felah · Paket: <code>com.felah.app</code> · Yürürlük: 25 Eylül 2025
+          Uygulama: Felah · Paket: <code>com.felah.app</code> · Yürürlük: 2 Ekim 2026
         </p>
       </header>
 
@@ -113,9 +113,11 @@
         </p>
         <ul>
           <li>
-            <strong>Konum (isteğe bağlı):</strong> Yalnızca siz «Mevcut konum» veya il/ilçe seçimi
-            yaptığınızda namaz vakitlerini hesaplamak için kullanılır. Arka planda sürekli konum
-            takibi yapılmaz.
+            <strong>Konum (isteğe bağlı):</strong> Yalnızca siz «Mevcut konum» seçtiğinizde,
+            bulunduğunuz ilçeyi belirlemek için bir kez kullanılır. İl/ilçe adı, telefonunuzun
+            işletim sisteminin adres hizmetiyle (Apple / Google) bulunur. Türkiye'de konum
+            koordinatınız cihazınızdan dışarı gönderilmez. Arka planda sürekli konum takibi
+            yapılmaz.
           </li>
           <li>
             <strong>Şehir / ilçe tercihi:</strong> Seçtiğiniz konum adı ve koordinatları cihazda
@@ -165,10 +167,15 @@
         <p>İnternet bağlantısı gerektiren özellikler şu hizmetlerle iletişim kurabilir:</p>
         <ul>
           <li>
-            <strong>AlAdhan</strong> (<a href="https://aladhan.com/">aladhan.com</a>): Namaz vakitleri
-            için seçtiğiniz konuma ilişkin enlem/boylam ve tarih bilgisi API isteğinde gönderilir.
-            Resmî Diyanet API’si kullanılmaz; vakitler AlAdhan hesaplama yöntemi (method 13) ile
-            üretilir.
+            <strong>Felah veri sunucusu</strong> (Vercel üzerinde barındırılır): Namaz vakitleri
+            için seçtiğiniz ilçenin vakit dosyası indirilir. İstekte yalnızca ilçe bilgisi bulunur;
+            sunucu kayıtlarında IP adresiniz görünebilir. Vakitler şu an AlAdhan hesaplama
+            yöntemiyle (method 13) üretilir; resmî Diyanet API’si kullanılmaz.
+          </li>
+          <li>
+            <strong>AlAdhan</strong> (<a href="https://aladhan.com/">aladhan.com</a>): Yalnızca
+            Türkiye dışındaki konumlar için ve Felah veri sunucusuna hiç ulaşılamadığında son çare
+            olarak kullanılır; bu durumda konumun enlem/boylamı ve tarih bilgisi gönderilir.
           </li>
           <li>
             <strong>mp3quran.net</strong> (<a href="https://mp3quran.net/">mp3quran.net</a>): «Kur’an
